@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Linkedin, Github, Terminal, Sparkles, BookOpen, Cpu, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Linkedin, Github, Sparkles, BookOpen, Cpu, ShieldCheck } from 'lucide-react';
 import { PROFILE_INFO, SOCIAL_LINKS } from '../data/portfolioData';
 
 export const Hero: React.FC = () => {

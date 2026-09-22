@@ -1,6 +1,5 @@
 import React from 'react';
-import { User, Sparkles, Compass, Target, GraduationCap, Lightbulb, BookOpen } from 'lucide-react';
-import { PROFILE_INFO } from '../data/portfolioData';
+import { User, Compass, Target, GraduationCap, Lightbulb } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (

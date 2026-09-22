@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FolderGit2, Github, ExternalLink, Sparkles, Terminal, CheckCircle2, Clock, Code, Layers } from 'lucide-react';
+import { FolderGit2, Github, ExternalLink, Terminal, CheckCircle2, Clock } from 'lucide-react';
 import { PROJECTS, SOCIAL_LINKS } from '../data/portfolioData';
 import { VotingSimulator } from './VotingSimulator';
 

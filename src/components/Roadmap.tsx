@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, CheckCircle, Clock, Sparkles, Compass, ArrowRight, BookMarked } from 'lucide-react';
+import { Route, CheckCircle } from 'lucide-react';
 import { ROADMAP_MILESTONES } from '../data/portfolioData';
 
 export const Roadmap: React.FC = () => {

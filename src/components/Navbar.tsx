@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Terminal, ArrowUpRight } from 'lucide-react';
+import { Menu, X, Github, Linkedin, ArrowUpRight } from 'lucide-react';
 import { SOCIAL_LINKS, PROFILE_INFO } from '../data/portfolioData';
 
 interface NavbarProps {

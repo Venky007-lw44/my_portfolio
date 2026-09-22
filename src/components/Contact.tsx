@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Github, Send, Copy, Check, MessageSquare, ArrowUp, Sparkles, Heart } from 'lucide-react';
-import { SOCIAL_LINKS, PROFILE_INFO } from '../data/portfolioData';
+import { Mail, Linkedin, Github, Send, Copy, Check, MessageSquare, ArrowUp } from 'lucide-react';
+import { SOCIAL_LINKS } from '../data/portfolioData';
 
 export const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -12,10 +12,27 @@ export const Contact: React.FC = () => {
     message: '',
   });
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(SOCIAL_LINKS.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+  const handleCopyEmail = async () => {
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(SOCIAL_LINKS.email);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = SOCIAL_LINKS.email;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      // In restricted iframe environments, still provide visual confirmation
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
