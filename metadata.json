@@ -1,0 +1,6 @@
+{
+  "name": "Venkat Reddy Portfolio",
+  "description": "Personal portfolio website of Venkat Reddy, aspiring AI engineer and 1st-year CSE student at Joy University specializing in deep tech, foundation models, and software development.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
